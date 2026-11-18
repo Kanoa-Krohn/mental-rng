@@ -14,37 +14,39 @@ This is the baseline. Every other method gets compared against it.
 
 ## Source and mapping
 
-- **Source:** my own intuition
+- **Source:** my own intuition / my sister's
 - **Mapping:** none
 
 ## How the data was collected
 
-Two runs, each N = 100 numbers, range 1 to 9.
+Two runs, each N = 100 numbers, range 1 to 9. Another run with N = 200 numbers, range 1 to 9.
 
 - **Run 1** (`data/traditional.txt`): about 6:30 pm. I had just been told that people tend to favor 3 and 7 and rarely repeat, which may have influenced me.
 - **Run 2** (`data/traditional2.txt`): about 10:30 pm, tired after coding. I deliberately tried not to type too many 3s and 7s, and tried not to repeat much.
 - **Both runs:** I was in front of my laptop typing the numbers as I went, so I could see the number keys. That may have acted as a visual cue, so these runs are not purely mental.
+- **Run 3** (`data/traditional3.txt`): about 7:45pm. Made my sister come up with numbers. No influence (no statistical data, no laptop in front). Did not tell how many numbers to say.
 
 ## Results
 
-| Test | Run 1 | Run 2 | Combined (N = 200) | Aim |
-|------|-------|-------|--------------------|-----|
-| Chi-square | 4.22 | 4.76 | 3.31 | about 8 (df = 8) |
-| P-value | 0.84 | 0.78 | 0.91 | above 0.05 |
-| Repeat rate | 0.07 | 0.04 | 0.06 | about 0.11 |
-| Entropy (bits) | 3.14 | 3.13 | 3.16 | about 3.11 to 3.17 |
+| Test | Run 1 | Run 2 | Combined (N = 200) | Run 3 (N = 200) | Aim |
+|------|-------|-------|--------------------| ----- |-----|
+| Chi-square | 4.22 | 4.76 | 3.31 | 7.36 | about 8 (df = 8) |
+| P-value | 0.84 | 0.78 | 0.91 | 0.50 | above 0.05 |
+| Repeat rate | 0.07 | 0.04 | 0.06 | 0.03 | about 0.11 |
+| Entropy (bits) | 3.14 | 3.13 | 3.16 | 3.14 | about 3.11 to 3.17 |
 
-Charts: `visualizations/traditional.png`, `visualizations/traditional2.png`, `visualizations/traditional-1-and-2.png`
+Charts: `visualizations/traditional.png`, `visualizations/traditional2.png`, `visualizations/traditional-1-and-2.png`, `visualizations/traditional3.png`
 
 ## What the results show
 
 - **How often each number appeared looks fine.** All p-values are well above 0.05, so there's no evidence of bias toward particular numbers. Entropy is in the expected range every time. No number stood out in both runs.
 - **Repeats are where my bias showed up.** All three repeat rates are below the expected 0.11. In run 1 I made about 7 repeats out of 99 pairs, where about 11 is expected (a normal range is roughly 5 to 17). In run 2 it was about 4, just below that range, which fits with me deliberately avoiding repeats. Combined, it was about 11 repeats out of 199 pairs, where about 22 is expected (normal range roughly 13 to 31).
 - **The combined chi-square (3.31) is lower than the typical value of about 8.** That means the counts are a bit flatter than pure chance usually produces. It's not conclusive, but it fits with me trying to balance my numbers, especially in run 2.
+- **Run 3 made it clear that the first 2 runs were influenced in some ways.** No initial knowledge on human randomness and no keyboard that shows numbers improved randomness. Although, the repeat rate remaind lower than the typical value.
 
 ## Limitations
 
-- One person, two runs.
+- Two people, three runs.
 - Run 1 was influenced by what I had just heard, and run 2 was deliberate and done while tired, so the runs weren't under the same conditions.
 - I could see the keyboard's number keys while typing.
 - N = 100 is small, so a mild bias in how often numbers appear could be hidden.
